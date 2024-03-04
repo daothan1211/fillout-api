@@ -1,7 +1,7 @@
 const express = require('express')
 bodyParser = require('body-parser')
-const { filterForm } = require('./controllers/formController')
-const { validate } = require('./middlewares/validator')
+const { filterForm } = require('./src/controllers/formController')
+const { validate } = require('./src/middlewares/validator')
 
 const app = express()
 const port = 3000
