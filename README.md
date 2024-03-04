@@ -13,7 +13,7 @@
 
 ## About The Project
 
-[https://fillout-api.onrender.com](https://fillout-api.onrender.com/cLZojxk94ous/filteredResponses?limit=1)
+[https://fillout-api.onrender.com](https://fillout-api.onrender.com)
 
 Request this API to get the submissions from Fillout
 
@@ -64,3 +64,9 @@ This is an example of how to list things you need to use the software and how to
    API_URL="ENTER YOUR API_URL"
    API_TOKEN="ENTER YOUR API_TOKEN"
    ```
+
+## Usage
+
+You can request to get submissions from Fillout following the query with defined query params above
+
+https://fillout-api.onrender.com/cLZojxk94ous/filteredResponses?limit=1
