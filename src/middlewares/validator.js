@@ -1,6 +1,11 @@
 const createHttpError = require('http-errors')
 const formRequest = require('../schemas')
 
+/**
+ * The middleware to validate the query params
+ * @param {*} validator 
+ * @returns validation error or success bypass
+ */
 const validate = (validator) => {
   //! If validator is not exist, throw err
   if (!formRequest.hasOwnProperty(validator))

@@ -7,6 +7,9 @@ const Joi = require('joi')
 //     value: Joi.string().required()
 // })
 
+/**
+ * This is the schema for request query
+ */
 const formRequest = Joi.object({
     limit: Joi.number().default(150),
     afterDate: Joi.string(),

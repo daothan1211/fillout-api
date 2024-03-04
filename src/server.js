@@ -1,7 +1,7 @@
 const express = require('express')
 bodyParser = require('body-parser')
-const { filterForm } = require('./src/controllers/formController')
-const { validate } = require('./src/middlewares/validator')
+const { filterForm } = require('./controllers/formController')
+const { validate } = require('./middlewares/validator')
 
 const app = express()
 const port = 3000
@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+/**
+ * The method to get question response
+ */
 app.get('/:formId/filteredResponses', validate('formRequest'), filterForm)
 
 //* Error Handler

@@ -3,6 +3,12 @@ const _ = require('lodash');
 const createError = require('http-errors');
 const api = require("../helpers/api");
 
+/**
+ * The controller to get the data from Fillout API by query params
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
 const filterForm = async (req, res, next) => {
   try {
     if (!req.params.formId) {
