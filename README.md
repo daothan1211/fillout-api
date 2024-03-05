@@ -69,7 +69,7 @@ This is an example of how to list things you need to use the software and how to
 
 You can request to get submissions from Fillout following the query with defined query params above
 
-https://fillout-api.onrender.com/${formID}/filteredResponses?limit=1
+https://fillout-api.onrender.com/${formID}/filteredResponses?limit=10
 
 body:
 
@@ -79,12 +79,12 @@ body:
         {
             "id": "bE2Bo4cGUv49cjnqZ4UnkW",
             "condition": "equals",
-            "value": null
+            "value": "Johnny"
         },
         {
             "id": "dSRAe3hygqVwTpPK69p5td",
-            "condition": "equals",
-            "value": null
+            "condition": "greater_than",
+            "value": "2024-01-01"
         }
     ]
 }
