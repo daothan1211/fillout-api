@@ -70,3 +70,22 @@ This is an example of how to list things you need to use the software and how to
 You can request to get submissions from Fillout following the query with defined query params above
 
 https://fillout-api.onrender.com/${formID}/filteredResponses?limit=1
+
+body:
+
+```sh
+{
+    "filters": [
+        {
+            "id": "bE2Bo4cGUv49cjnqZ4UnkW",
+            "condition": "equals",
+            "value": null
+        },
+        {
+            "id": "dSRAe3hygqVwTpPK69p5td",
+            "condition": "equals",
+            "value": null
+        }
+    ]
+}
+```
