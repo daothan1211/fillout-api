@@ -1,5 +1,7 @@
-const formRequest = require('./request.schema')
+const queryRequest = require('./query.schema')
+const filterRequest = require('./filters.schema')
 
 module.exports = {
-  formRequest
+  queryRequest,
+  filterRequest
 }

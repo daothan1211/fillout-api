@@ -1,16 +1,9 @@
 const Joi = require('joi')
 
-
-// const FilterClauseType = Joi.object().keys({
-//     id: Joi.string().required(),
-//     condition: Joi.string().required(),
-//     value: Joi.string().required()
-// })
-
 /**
  * This is the schema for request query
  */
-const formRequest = Joi.object({
+const queryRequest = Joi.object({
     limit: Joi.number().default(150),
     afterDate: Joi.string(),
     beforeDate: Joi.string(),
@@ -18,8 +11,6 @@ const formRequest = Joi.object({
     status: Joi.string(),
     includeEditLink: Joi.string(),
     sort: Joi.string().default('asc'),
-    // filters: Joi.array().items(FilterClauseType)
 });
 
-
-module.exports = formRequest;
+module.exports = queryRequest;

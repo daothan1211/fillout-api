@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 /**
  * The method to get question response
  */
-app.get('/:formId/filteredResponses', validate('formRequest'), filterForm)
+app.get('/:formId/filteredResponses', validate(), filterForm)
 
 //* Error Handler
 app.use((err, _req, res, _next) => {

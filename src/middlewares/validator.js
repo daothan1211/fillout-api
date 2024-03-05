@@ -1,20 +1,20 @@
 const createHttpError = require('http-errors')
-const formRequest = require('../schemas')
+const validateSchemas = require('../schemas')
 
 /**
  * The middleware to validate the query params
  * @param {*} validator 
  * @returns validation error or success bypass
  */
-const validate = (validator) => {
-  //! If validator is not exist, throw err
-  if (!formRequest.hasOwnProperty(validator))
-    throw new Error(`'${validator}' validator is not exist`)
-
+const validate = () => {
   return async function (req, res, next) {
     try {
-      const validated = await formRequest[validator].validateAsync(req.query);
-      req.body = validated
+      const validatedBody = await validateSchemas['filterRequest'].validateAsync({ filters: req.body.filters || [] });
+      const validatedQuery = await validateSchemas['queryRequest'].validateAsync(req.query);
+      req.body = {
+        filters: validatedBody.filters,
+        query: validatedQuery
+      }
       next()
     } catch (err) {
       if (err.isJoi) {
