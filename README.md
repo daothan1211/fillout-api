@@ -31,8 +31,8 @@ Query parameters:
 
 This section should list any major frameworks/libraries used to bootstrap your project.
 
-- [NodeJS][Next-url](https://nodejs.org/en)]
-- [ExpressJS][React-url](https://expressjs.com)]
+- [NodeJS](https://nodejs.org/en)
+- [ExpressJS](https://expressjs.com)
 
 <!-- GETTING STARTED -->
 
